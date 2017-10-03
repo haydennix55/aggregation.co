@@ -12,6 +12,13 @@ function Query($db, $query)
 	return $stmt->fetchAll();
 }
 
+function QueryInsert($db, $query)
+{
+	$stmt = $db->prepare($query);
+	$stmt->execute();
+	return $stmt;
+}
+
 /* Prepare a string for insertion into the database */
 function RealEscapeString($db, $escapestr)
 {
@@ -22,15 +29,14 @@ function RealEscapeString($db, $escapestr)
  * Database access
  */
 
-/* $username = "root"; */
-$username = "cms";
+$username = "root";
+// $username = "cms";
 
-/*$password = ""; */
-$password = "Abby2008";
+$password = "Dcsd128634";
+// $password = "Abby2008";
 
-/* $host = "localhost"; */
-//$host = "209.17.116.156";
-$host = "205.178.137.139";
+$host = "127.0.0.1";
+//$host = "205.178.137.139";
 
 $dbname = "cornfedcms";
 
