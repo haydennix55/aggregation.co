@@ -4,6 +4,10 @@ require("include/header.php");
 require("include/nav.php");
 require("include/rss_util.php");
 
+echo "<form action='reload.php' method='post'>";
+echo "<input type='submit' value='Refresh' />";
+echo "</form>";
+
 echo "<div id=\"content\">\n";
 echo "<div id=\"content-left\">\n";
 
